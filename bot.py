@@ -20,19 +20,7 @@ spam_chats = []
 
 
 
-@client.on(events.NewMessage(pattern="^/help$"))
-async def help(event):
-  helptext = "**Help Menu of MentionAllBot**\n\nCommand: /mentionall\n__You can use this command with text what you want to mention others.__\n`Example: /mentionall Good Morning!`\n__You can you this command as a reply to any message. Bot will tag users to that replied messsage__."
-  await event.reply(
-    helptext,
-    link_preview=False,
-    buttons=(
-      [
-        Button.url('📣 support', 'https://t.me/komi_support'),
-        Button.url('📦 updates', 'https://t.me/komisanupdates')
-      ]
-    )
-  )
+
   
 @client.on(events.NewMessage(pattern="^/all ?(.*)"))
 async def mentionall(event):
